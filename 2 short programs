@@ -1,0 +1,33 @@
+// 1. Write a program that rounds a double to 2 decimal places (use a function from <cmath>
+// 2. Write a program that generates and displays a random number between 1 and 10 <ctime>
+/*
+Bryce Lombardo
+12/18/2024
+Do Now
+*/
+#include <iostream>
+//imports cmath library 
+#include <cmath>
+//imports ctime library 
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    double a;
+    //asks the user to enter a number with a decimal
+    cout << "Enter a number with a decimal " << endl;
+    cin >> a;
+    //uses the round funcation aswell as some math to find the second decimal place 
+    double rndNum = round(a * 100.0) / 100.0;
+    cout << rndNum << endl;
+
+    int rando;
+    //uses a seed and sets it to time
+     srand (time(NULL));
+     //gets the random number 
+    rando = rand() % 10 + 1;
+    //prints the random number
+    cout << "your random number is " << rando << endl;
+    return 0;
+}
